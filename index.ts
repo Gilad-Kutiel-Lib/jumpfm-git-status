@@ -58,10 +58,10 @@ class GitStatus {
         .filter((cls, i) => mask & (1 << i))
 
     updateStatus = () => {
-        nodegit.Repository.open(this.root).then(repo => {
+        this.nodegit.Repository.open(this.root).then(repo => {
             this.panel.getItems().forEach(item => {
                 item.classes = []
-                const status = nodegit.Status.file(
+                const status = this.nodegit.Status.file(
                     repo,
                     path.relative(this.root, item.path)
                 )

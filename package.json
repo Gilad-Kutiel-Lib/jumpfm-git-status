@@ -11,7 +11,6 @@
     "dependencies": {
         "find-parent-dir": "^0.3.0",
         "node-watch": "^0.5.5",
-        "nodegit": "^0.18.3",
         "path": "^0.12.7"
     },
     "devDependencies": {
