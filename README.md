@@ -1,1 +1,1 @@
-A JumpFm plugin that displays the current version.
+A JumpFm plugin that shows the git status of the files.
