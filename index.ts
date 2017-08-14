@@ -1,15 +1,16 @@
 import * as findParentDir from 'find-parent-dir'
-import * as nodegit from 'nodegit'
 import * as path from 'path'
-import * as  watch from 'node-watch'
+import * as watch from 'node-watch'
 
 class GitStatus {
+    readonly nodegit
     readonly panel
     root: string
     rootWatcher = { close: () => undefined }
     indexWatcher = { close: () => undefined }
 
-    constructor(panel) {
+    constructor(nodegit, panel) {
+        this.nodegit = nodegit
         this.panel = panel
         panel.listen(this)
     }
@@ -71,5 +72,5 @@ class GitStatus {
 }
 
 export const load = (jumpFm) => {
-    jumpFm.panels.forEach(panel => new GitStatus(panel))
+    jumpFm.panels.forEach(panel => new GitStatus(jumpFm.git, panel))
 }
