@@ -13,7 +13,5 @@
         "node-watch": "^0.5.5",
         "path": "^0.12.7"
     },
-    "devDependencies": {
-        "electron": "^1.6.11"
-    }
+    "devDependencies": {}
 }

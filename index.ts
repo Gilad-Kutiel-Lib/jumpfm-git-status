@@ -58,19 +58,21 @@ class GitStatus {
         .filter((cls, i) => mask & (1 << i))
 
     updateStatus = () => {
-        this.nodegit.Repository.open(this.root).then(repo => {
-            this.panel.getItems().forEach(item => {
-                item.classes = []
-                const status = this.nodegit.Status.file(
-                    repo,
-                    path.relative(this.root, item.path)
-                )
-                item.classes.push(...this.getClasses(status))
+        this.nodegit.Repository.open(this.root)
+            .then(repo => {
+                this.panel.getItems().forEach(item => {
+                    item.classes = []
+                    const status = this.nodegit.Status.file(
+                        repo,
+                        path.relative(this.root, item.path)
+                    )
+                    item.classes.push(...this.getClasses(status))
+                })
             })
-        })
     }
 }
 
+export const css = ['index.css']
 export const load = (jumpFm) => {
-    jumpFm.panels.forEach(panel => new GitStatus(jumpFm.git, panel))
+    jumpFm.panels.forEach(panel => new GitStatus(jumpFm.nodegit, panel))
 }
