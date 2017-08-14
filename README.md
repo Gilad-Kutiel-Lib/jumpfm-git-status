@@ -1,0 +1,1 @@
+A JumpFm plugin that displays the current version.
