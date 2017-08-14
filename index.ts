@@ -71,5 +71,5 @@ class GitStatus {
 }
 
 export const load = (jumpFm) => {
-    this.jumpFm.panels.forEach(panel => new GitStatus(panel))
+    jumpFm.panels.forEach(panel => new GitStatus(panel))
 }
