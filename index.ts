@@ -1,10 +1,12 @@
+import { JumpFm, Panel } from 'jumpfm-api'
+
 import * as findParentDir from 'find-parent-dir'
 import * as path from 'path'
 import * as watch from 'node-watch'
 
 class GitStatus {
     readonly nodegit
-    readonly panel
+    readonly panel: Panel
     root: string
     rootWatcher = { close: () => undefined }
     indexWatcher = { close: () => undefined }
@@ -73,6 +75,6 @@ class GitStatus {
 }
 
 export const css = ['index.css']
-export const load = (jumpFm) => {
+export const load = (jumpFm: JumpFm) => {
     jumpFm.panels.forEach(panel => new GitStatus(jumpFm.nodegit, panel))
 }
