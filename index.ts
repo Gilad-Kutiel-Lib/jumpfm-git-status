@@ -44,12 +44,13 @@ class GitStatus {
     readonly iCls = {
         '?': 'git-new'
         , '!': 'git-ignore'
-        , 'D': 'git-rm'
-        , 'A': 'git-add'
+        , 'D': 'git-i-del'
+        , 'A': 'git-i-add'
+        , 'M': 'git-i-mod'
     }
 
     readonly wtCls = {
-        'M': 'git-modified'
+        'M': 'git-wt-mod'
     }
 
     private status = (path: string, name: string, cb: (err, res) => void) => {

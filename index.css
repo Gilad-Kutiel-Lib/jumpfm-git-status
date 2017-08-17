@@ -6,14 +6,18 @@
     color: #949494;
 }
 
-.git-rm {
+.git-i-del {
     text-decoration: line-through;
 }
 
-.git-add {
+.git-i-add {
     color: #A9D3AB;
 }
 
-.git-modified {
+.git-i-mod {
+    color: #A9D3AB;
+}
+
+.git-wt-mod {
     color: #FED37E;
 }
