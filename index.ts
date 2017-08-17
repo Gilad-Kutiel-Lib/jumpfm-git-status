@@ -17,8 +17,6 @@ class GitStatus {
     }
 
     onPanelItemsSet = () => {
-        console.log('on panel')
-
         const url = this.panel.getUrl()
 
         this.rootWatcher.close()
@@ -59,11 +57,9 @@ class GitStatus {
     }
 
     updateStatus = () => {
-        console.log('update')
         const path = this.panel.getPath()
         this.panel.getItems().forEach(item => {
             this.status(path, item.name, (err, res: string) => {
-                console.log(res)
                 if (res.length < 2) return
                 const iCls = this.iCls[res.charAt(0)]
                 const wtCls = this.wtCls[res.charAt(1)]
