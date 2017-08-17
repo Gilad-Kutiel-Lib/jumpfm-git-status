@@ -1,20 +1,19 @@
-.git-index-new,
-.git-index-modified {
-    color: #A9D3AB;
-}
-
-.git-index-deleted {
-    text-decoration: line-through;
-}
-
-.git-wt-new {
+.git-new {
     color: #F58E8E;
 }
 
-.git-wt-modified {
-    color: #FED37E;
+.git-ignore {
+    color: #949494;
 }
 
-.git-ignored {
-    color: #949494;
+.git-rm {
+    text-decoration: line-through;
+}
+
+.git-add {
+    color: #A9D3AB;
+}
+
+.git-modified {
+    color: #FED37E;
 }

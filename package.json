@@ -10,12 +10,11 @@
     "license": "ISC",
     "dependencies": {
         "find-parent-dir": "^0.3.0",
+        "node-cmd": "^3.0.0",
         "node-watch": "^0.5.5",
-        "nodegit": "^0.20.1",
         "path": "^0.12.7"
     },
     "devDependencies": {
-        "electron-rebuild": "^1.6.0",
         "jumpfm-api": "^1.0.5"
     }
 }
