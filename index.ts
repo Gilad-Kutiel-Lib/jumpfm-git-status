@@ -3,16 +3,15 @@ import { JumpFm, Panel } from 'jumpfm-api'
 import * as findParentDir from 'find-parent-dir'
 import * as path from 'path'
 import * as watch from 'node-watch'
+import * as nodegit from 'nodegit'
 
 class GitStatus {
-    readonly nodegit
     readonly panel: Panel
     root: string
     rootWatcher = { close: () => undefined }
     indexWatcher = { close: () => undefined }
 
-    constructor(nodegit, panel) {
-        this.nodegit = nodegit
+    constructor(panel) {
         this.panel = panel
         panel.listen(this)
     }
@@ -60,11 +59,11 @@ class GitStatus {
         .filter((cls, i) => mask & (1 << i))
 
     updateStatus = () => {
-        this.nodegit.Repository.open(this.root)
+        nodegit.Repository.open(this.root)
             .then(repo => {
                 this.panel.getItems().forEach(item => {
                     item.classes = []
-                    const status = this.nodegit.Status.file(
+                    const status = nodegit.Status.file(
                         repo,
                         path.relative(this.root, item.path)
                     )
@@ -76,5 +75,5 @@ class GitStatus {
 
 export const css = ['index.css']
 export const load = (jumpFm: JumpFm) => {
-    jumpFm.panels.forEach(panel => new GitStatus(jumpFm.nodegit, panel))
+    jumpFm.panels.forEach(panel => new GitStatus(panel))
 }
