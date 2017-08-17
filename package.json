@@ -1,20 +1,20 @@
 {
-    "name": "jumpfm-git-status",
-    "version": "1.0.3",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "find-parent-dir": "^0.3.0",
-        "node-cmd": "^3.0.0",
-        "node-watch": "^0.5.5",
-        "path": "^0.12.7"
-    },
-    "devDependencies": {
-        "jumpfm-api": "^1.0.5"
-    }
+  "name": "jumpfm-git-status",
+  "version": "1.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "find-parent-dir": "^0.3.0",
+    "node-cmd": "^3.0.0",
+    "node-watch": "^0.5.5",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "jumpfm-api": "^1.0.5"
+  }
 }
