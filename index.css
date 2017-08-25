@@ -1,23 +1,20 @@
-.git-new {
-    color: #F58E8E;
+[git-index-ignore] {
+  color: #949494;
 }
 
-.git-ignore {
-    color: #949494;
+[git-index=del] {
+  text-decoration: line-through;
 }
 
-.git-i-del {
-    text-decoration: line-through;
+[git-index=add],
+[git-index=mod] {
+  color: #A9D3AB;
 }
 
-.git-i-add {
-    color: #A9D3AB;
+[git-wt=mod] {
+  color: #FED37E;
 }
 
-.git-i-mod {
-    color: #A9D3AB;
-}
-
-.git-wt-mod {
-    color: #FED37E;
+[git-index=new] {
+  color: #F58E8E;
 }

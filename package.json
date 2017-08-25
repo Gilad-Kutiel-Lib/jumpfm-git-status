@@ -1,6 +1,6 @@
 {
   "name": "jumpfm-git-status",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,10 @@
   "dependencies": {
     "find-parent-dir": "^0.3.0",
     "node-cmd": "^3.0.0",
-    "node-watch": "^0.5.5",
-    "path": "^0.12.7"
+    "node-watch": "^0.5.5"
   },
   "devDependencies": {
+    "@types/node": "^8.0.25",
     "jumpfm-api": "^1.0.5"
   }
 }
