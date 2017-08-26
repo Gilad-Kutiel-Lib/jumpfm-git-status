@@ -1,1 +1,1 @@
-A JumpFm plugin that shows the git status of the files.
+A [JumpFm](http://jumpfm.org/) plugin that shows the git status of the files.
